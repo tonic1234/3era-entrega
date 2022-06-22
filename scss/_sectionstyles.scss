@@ -60,6 +60,11 @@
             background-color: $productGaleryColor;
             margin-bottom: 0.5rem;
 
+            &:hover {
+
+                box-shadow: 0px 0px 2px 1px rgba(170, 170, 170, 0.639);
+            }
+
 
             .sideProductImage {
                 width: 6.25rem;
@@ -92,8 +97,7 @@
                     font-weight: 600;
                     color: $darkText;
 
-
-                    .sideOfert {
+                    .sideOfert{
                         text-decoration: line-through;
                         color: $ofertText;
                     }
@@ -168,6 +172,10 @@
                 font-weight: 600;
                 color: $darkText;
 
+            }
+            .ofert{
+                text-decoration: line-through;
+                color: $ofertText;
             }
 
             .productGalerypStars {

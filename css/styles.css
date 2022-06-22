@@ -577,6 +577,11 @@ footer img {
   margin-bottom: 0.5rem;
 }
 
+.sectionFlexContainer .sideBar .sideProductBox:hover {
+  -webkit-box-shadow: 0px 0px 2px 1px rgba(170, 170, 170, 0.639);
+          box-shadow: 0px 0px 2px 1px rgba(170, 170, 170, 0.639);
+}
+
 .sectionFlexContainer .sideBar .sideProductBox .sideProductImage {
   width: 6.25rem;
   margin-left: 0.3125rem;
@@ -683,6 +688,11 @@ footer img {
   font-size: 13pt;
   font-weight: 600;
   color: #373737;
+}
+
+.productGalery .productGaleryContainer .productGaleryBox .ofert {
+  text-decoration: line-through;
+  color: #606060;
 }
 
 .productGalery .productGaleryContainer .productGaleryBox .productGalerypStars {
