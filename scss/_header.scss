@@ -1,0 +1,143 @@
+header {
+    height: 3.75rem;
+    width: 100%;
+    background-color: $headerColor;
+    position: sticky;
+    top: 0px;
+    backdrop-filter: blur(2px);
+    z-index: 3;
+
+    .headerBox {
+        display: flex;
+        justify-content: space-around;
+
+        .headerLogo {
+            height: 2.5rem;
+            margin-top: 0.5625rem;
+
+        }
+
+        ul {
+            display: block;
+            list-style: none;
+            margin: 1.0625rem 0px 0px 0px;
+            text-decoration: none;
+
+            li {
+                display: inline-block;
+                margin-left: 0.625rem;
+                transition: all 1s;
+
+                &:hover {
+                    transform: scale(1.15);
+
+                }
+
+                a {
+                    color: $ligthText;
+                    font-size: 14pt;
+                    transition: 1s;
+
+
+                    &:link,
+                    :visited,
+                    :active {
+                        color: $ligthText;
+                    }
+
+                    &:hover {
+                        color: $oText;
+                    }
+
+
+                }
+
+            }
+        }
+
+
+        .headerIconBox {
+
+            .headerFavIcon,
+            .headerBagIcon,
+            .headerMenuMobile {
+                width: 23px;
+                margin: 16px 10px 0px 0px;
+                transition: all 1s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+
+
+            }
+
+            .headerMenuMobile {
+                display: none;
+                margin-bottom: 2px;
+
+            }
+
+
+
+        }
+
+    }
+
+}
+
+.headerMobileBox {
+    display: none;
+    justify-content: center;
+    margin-top: 10px;
+
+    .mobileFilterIcon {
+        width: 25px;
+        margin-left: 10px;
+    }
+
+    .mobileSearchBar {
+        height: 30px;
+        width: 65%;
+        border-radius: 7px;
+        padding-left: 15px;
+        border: none;
+        font-family: 'poppins';
+    }
+
+}
+
+// Media queries
+
+@media (max-width: 768px) {
+    body header {
+        height: 6.75rem;
+    }
+
+    body header .headerBox .headerLogo {
+        height: 2rem;
+        margin-top: 10px;
+    }
+
+    body header .headerBox ul {
+        display: none;
+    }
+
+    body header .headerBox .headerIconBox .headerMenuMobile {
+        display: inline;
+
+    }
+
+    body .headerMobileBox {
+        display: flex;
+
+    }
+
+
+    body header .headerBox .headerIconBox .headerFavIcon,
+    body header .headerBox .headerIconBox .headerBagIcon,
+    body header .headerBox .headerIconBox .headerMenuMobile {
+        width: 25px;
+        margin: 16px 5px 0px 0px;
+    }
+}

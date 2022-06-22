@@ -1,0 +1,43 @@
+.contactBanner {
+    background: url(../media/banner2.jpg);
+    height: 20.25rem;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.contactTitle {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.25rem;
+    color: $oText;
+}
+
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding: 1.875rem;
+
+    form {
+        width: 31.25rem;
+        margin-bottom: 20px;        
+     
+        button{
+            background-color: $oText;
+            color: $ligthText;
+        }
+        .form-check-input {
+            background-color: $oText;
+            border: $oText;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contactBanner {
+        display: none;
+    }
+    }

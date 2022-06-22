@@ -1,0 +1,257 @@
+.sectionTitle {
+    text-align: center;
+    font-size: 21pt;
+    margin-bottom: 40px;
+    color: $darkText
+}
+
+@keyframes bannerAnimation {
+    from {
+        background-image: url("../media/banner.jpg");
+    }
+
+    to {
+        background-image: url("../media/banner5.jpg")
+    }
+}
+
+
+.mainBanner {
+    background: url(../media/banner.jpg);
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation-name: bannerAnimation;
+    animation-duration: 7s;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+.mobileBanner {
+    display: none;
+}
+
+.mainLogos {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+    img {
+        width: 200px;
+    }
+}
+
+.mainCat {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    column-gap: 10px;
+
+
+}
+
+.catMujeres,
+.catHombres,
+.catAccesorios {
+    display: flex;
+    align-items: flex-end;
+    width: 18.75em;
+    height: 21.875em;
+    margin-bottom: 20px;
+    background-color: rgba(255, 106, 0, 0.349);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.25em;
+    color: #ffffff;
+    transition: 1s;
+
+    &:hover {
+        background-color: rgba(94, 94, 94, 0.105);
+        transform: scale(1.02);
+        
+       
+    }
+
+    .catFilterBox{
+        display: flex;
+        align-items: flex-end;
+        padding: 10px;
+        width: 300px;
+        height: 150px;
+        background-color: rgba(150, 150, 150, 0.3);
+        backdrop-filter: blur(3px);
+    }
+
+    .catContent {
+        text-shadow: 0px 0px 2px rgb(17, 17, 17);
+
+        .catTitle{
+            font-weight: 600;
+            line-height: 22px;
+        }
+
+        .catSubTitle {
+            font-weight: 400;
+            line-height: 22px;
+
+        }
+
+        .catTitle {
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 9.375em;
+            height: 2.5em;
+            margin-top: 0.625em;
+            background-color:$catBtnColor;
+            border: none;
+            font-size: 12pt;
+            font-weight: 400;
+            color: $ligthText;
+            
+
+        }
+    }
+}
+
+.catMujeres {
+    background-image: url(../media/catmujeres.jpg);
+}
+
+.catHombres {
+    background-image: url(../media/cathombres.jpg);
+}
+
+.catAccesorios {
+    background-image: url(../media/cataccesorios.jpg);
+}
+
+
+
+.featuredProducts {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+
+
+    .featuredProductBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 12em;
+        height: 20em;
+        background-color: $fProductsBgColor;
+        border: 1px solid rgba(211, 211, 211, 0.513);
+        border-radius: 0.75em;
+        padding: 0.625em;
+        transition: all 1s;
+        margin-bottom: 40px;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+
+        .productImage {
+            width: 11rem;
+        }
+
+        .producTitle {
+            margin-bottom: -6px;
+            color: $oText;
+        }
+
+        .productCategory {
+            font-size: 12pt;
+            font-weight: 500;
+            color: $darkText
+        }
+
+        .productPrice {
+            font-size: 13pt;
+            font-weight: 600;
+            color: $darkText;
+
+            span {
+                text-decoration: line-through;
+                color: $ofertText
+            }
+        }
+
+        .productStars {
+            width: 110px;
+        }
+
+    }
+
+}
+
+.secondBanner {
+    background: url(../media/banner4.jpg);
+    height: 500px;
+    width: 100%;
+    margin-top: 20px;
+    background-position:top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+}
+
+
+// Media queries
+
+@media (max-width: 768px) {
+
+    @keyframes bannerAnimation {
+        from {
+            background-image: url("../media/banner.jpg");
+        }
+
+        to {
+            background-image: url("../media/banner5.jpg")
+        }
+    }
+
+    .mainBanner {
+        background: url(../media/bannermobile.jpg);
+        background-position: top center;
+        animation-name: bannerAnimation;
+        animation-duration: 16s;
+        animation-delay: 2s;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+    }
+
+    .mainLogos img {
+        width: 70px;
+    }
+
+    .mainCat {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .featuredProducts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .featuredProducts .featuredProductBox {
+        align-items: center;
+        width: 16em;
+        height: 20em;
+        margin-bottom: 20px;
+
+
+    }
+}
