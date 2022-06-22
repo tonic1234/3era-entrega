@@ -426,10 +426,9 @@ footer img {
 
 .secondBanner {
   background: url(../media/banner4.jpg);
-  height: 500px;
+  height: 600px;
   width: 100%;
   margin-top: 20px;
-  background-position: top;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -821,6 +820,17 @@ footer img {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: nosotros;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 106, 0, 0.511);
+  background-blend-mode: multiply;
   background-image: url(../media/nosotros.jpeg);
   background-position: center;
   background-size: cover;
@@ -831,9 +841,20 @@ footer img {
 .nosotros:hover, .queHacemos:hover, .comoHacemos:hover, .dondeHacemos:hover, .dameroLogo:hover {
   -webkit-box-shadow: 0px 0px 2px 2px #e96818;
           box-shadow: 0px 0px 2px 2px #e96818;
+  background-color: rgba(255, 255, 255, 0);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   z-index: 2;
+}
+
+.nosotros h2, .queHacemos h2, .comoHacemos h2, .dondeHacemos h2, .dameroLogo h2 {
+  text-align: center;
+  text-shadow: 0px 0px 2px #111111;
+  color: #ffff;
+}
+
+.dameroLogo {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .dameroLogo:hover {

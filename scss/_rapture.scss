@@ -18,19 +18,33 @@
 }
 .nosotros , .queHacemos, .comoHacemos, .dondeHacemos, .dameroLogo{
     grid-area: nosotros;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 106, 0, 0.511);
+    background-blend-mode: multiply;
     background-image: url(../media/nosotros.jpeg);
     background-position: center;
     background-size: cover;
     transition:  all 1s;
+
     &:hover{
         box-shadow: 0px 0px 2px 2px $oText;
+        background-color: rgba(255, 255, 255, 0);
         transform: scale(1.05);
         z-index: 2;
+           }
+
+    h2{
+        text-align: center;
+        text-shadow: 0px 0px  2px rgb(17, 17, 17);
+        color: #ffff;
     }
    
 }
 
 .dameroLogo{
+    background-color: rgba(255, 255, 255, 0);
     &:hover{
         transform: none;
     }
