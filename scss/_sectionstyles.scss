@@ -115,21 +115,21 @@
 }
 
 .productGalery {
-    width: 700px;
+    width: 43.75rem;
     background-color: $productGaleryColor;
 
     .catTitle {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 1.25rem;
         color: $oText;
     }
 
 
     .productGaleryContainer {
-        margin: 30px 0px 20px 45px;
+        margin: 1.875rem 0rem 1.25rem 2.8125rem;
         display: flex;
         flex-wrap: wrap;
-        column-gap: 20px;
+        column-gap: 1.25rem;
 
 
 
@@ -143,7 +143,7 @@
             border-radius: 0.75em;
             padding: 0.625em;
             transition: all 1s;
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
             box-shadow: 0px 0px 3px rgba(140, 140, 140, 0.516);
 
             &:hover {
@@ -179,7 +179,7 @@
             }
 
             .productGalerypStars {
-                width: 90px;
+                width: 5.625rem;
             }
 
 
@@ -198,7 +198,7 @@
     .productGalery .productGaleryContainer {
         justify-content: center;
         margin: 0px;
-        margin-top: 30px;
+        margin-top: 1.875rem;
 
     }
 
@@ -208,7 +208,7 @@
         border-radius: 0.75em;
         padding: 0.625em;
         box-shadow: 1px 1px 3px rgba(140, 140, 140, 0.516);
-        margin-top: 10px;
+        margin-top: 0.625rem;
     }
 
     .productGalery .productGaleryContainer .productGaleryBox .productGaleryImage {
@@ -217,7 +217,7 @@
 
     .productGalery .productGaleryContainer .productGaleryBox .productGaleryTitle {
         font-size: 11pt;
-        margin-bottom: -6px;
+        margin-bottom: -0.375rem;
         color: #373737;
     }
 
@@ -235,10 +235,10 @@
     }
 
     .productGalery .productGaleryContainer .productGaleryBox .productGalerypStars {
-        width: 90px;
+        width: 5.625rem;
     }
 
     .productGalery .productGaleryContainer {
-        column-gap: 10px;
+        column-gap: 0.625rem;
     }
 }
