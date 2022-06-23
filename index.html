@@ -27,7 +27,36 @@
             <div class="headerIconBox">
                 <a href="#"><img src="./media/fav.svg" alt="Icono de favorito" class="headerFavIcon"></a>
                 <a href="#"><img src="./media/carrito.svg" alt="Icono de Carrito" class="headerBagIcon"></a>
-                <a href="#"><img class="headerMenuMobile" src="./media/menu.svg" alt="Icono de menu"></a>
+                <a href="#"><img id="menuMobileBtn" class="headerMenuIconMobile" src="./media/menu.svg"
+                        alt="Icono de menu"></a>
+            </div>
+            <div id="menuMobile" class="menuMobile">
+                <div class="boxMenuMobile">
+                    <div class="textMenuMobile">
+                        <img  id="closeMobileMenuBtn" class="closeMobileMenuBtn" src="./media/close.png" alt="">
+                    </div>
+                    <div class="navMenuMobile">
+                        <img class="menuMobileLogo" src="./media/logo.svg" alt="">
+                        <a href="./index.html">
+                            <h2>Inicio</h2>
+                        </a>
+                        <a href="./pages/tienda.html">
+                            <h2>Tienda</h2>
+                        </a>
+                        <a href="./pages/mujeres.html">
+                            <h2>Mujeres</h2>
+                        </a>
+                        <a href="./pages/hombres.html">
+                            <h2>Hombres</h2>
+                        </a>
+                        <a href="./pages/rapture.html">
+                            <h2>Rapture</h2>
+                        </a>
+                        <a href="./pages/contacto.html">
+                            <h2>Contacto</h2>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="headerMobileBox">
@@ -164,7 +193,7 @@
         </section>
         <!-- Inicio banner secundario -->
         <div class="secondBanner"></div>
-      </main>
+    </main>
     <!-- Inicio del footer -->
     <footer>
         <div class="footerText">
@@ -175,6 +204,20 @@
         </div>
     </footer>
     <!-- Fin del footer -->
+
+    <script>
+        const menuMobileBtn = document.getElementById('menuMobileBtn')
+        const closeMobileMenuBtn = document.getElementById('closeMobileMenuBtn')
+        const menuMobile = document.getElementById('menuMobile')
+
+
+        menuMobileBtn.addEventListener('click', function () {
+            menuMobile.classList.toggle('menuMobileC');
+        });
+        closeMobileMenuBtn.addEventListener('click', function () {
+            menuMobile.classList.toggle('menuMobileC');
+        });
+    </script>
 
 </body>
 

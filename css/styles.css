@@ -79,7 +79,7 @@ header .headerBox ul li a:hover {
 
 header .headerBox .headerIconBox .headerFavIcon,
 header .headerBox .headerIconBox .headerBagIcon,
-header .headerBox .headerIconBox .headerMenuMobile {
+header .headerBox .headerIconBox .headerMenuIconMobile {
   width: 1.4375rem;
   margin: 1rem 0.625rem 0rem 0rem;
   -webkit-transition: all 1s;
@@ -88,7 +88,7 @@ header .headerBox .headerIconBox .headerMenuMobile {
 
 header .headerBox .headerIconBox .headerFavIcon:hover,
 header .headerBox .headerIconBox .headerBagIcon:hover,
-header .headerBox .headerIconBox .headerMenuMobile:hover {
+header .headerBox .headerIconBox .headerMenuIconMobile:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -96,6 +96,10 @@ header .headerBox .headerIconBox .headerMenuMobile:hover {
 header .headerBox .headerIconBox .headerMenuMobile {
   display: none;
   margin-bottom: 0.125rem;
+}
+
+header .headerBox .headerIconBox .headerMenuIconMobile {
+  display: none;
 }
 
 .headerMobileBox {
@@ -120,6 +124,88 @@ header .headerBox .headerIconBox .headerMenuMobile {
   font-family: 'poppins';
 }
 
+/* The animation code */
+@-webkit-keyframes menuMobil {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes menuMobil {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menuMobile {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #e96818eb;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  -webkit-animation-name: menuMobil;
+          animation-name: menuMobil;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.menuMobile .boxMenuMobile {
+  width: 95%;
+  height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menuMobile .boxMenuMobile .textMenuMobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menuMobile .boxMenuMobile .textMenuMobile img {
+  width: 40px;
+  margin-bottom: 40px;
+  margin-left: 300px;
+}
+
+.menuMobile .boxMenuMobile .navMenuMobile {
+  text-align: center;
+}
+
+.menuMobile .boxMenuMobile .navMenuMobile img {
+  width: 250px;
+  margin-bottom: 40px;
+}
+
+.menuMobile .boxMenuMobile .navMenuMobile h2 {
+  color: white;
+  font-size: 25pt;
+}
+
+.menuMobileC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media (max-width: 768px) {
   body header {
     height: 6.75rem;
@@ -131,7 +217,7 @@ header .headerBox .headerIconBox .headerMenuMobile {
   body header .headerBox ul {
     display: none;
   }
-  body header .headerBox .headerIconBox .headerMenuMobile {
+  body header .headerBox .headerIconBox .headerMenuIconMobile {
     display: inline;
   }
   body .headerMobileBox {
@@ -141,7 +227,7 @@ header .headerBox .headerIconBox .headerMenuMobile {
   }
   body header .headerBox .headerIconBox .headerFavIcon,
   body header .headerBox .headerIconBox .headerBagIcon,
-  body header .headerBox .headerIconBox .headerMenuMobile {
+  body header .headerBox .headerIconBox .headerMenuIconMobile {
     width: 1.5625rem;
     margin: 1rem 0.3125rem 0rem 0rem;
   }

@@ -60,7 +60,7 @@ header {
 
             .headerFavIcon,
             .headerBagIcon,
-            .headerMenuMobile {
+            .headerMenuIconMobile {
                 width: 1.4375rem;
                 margin: 1rem 0.625rem 0rem 0rem;
                 transition: all 1s;
@@ -76,6 +76,10 @@ header {
                 display: none;
                 margin-bottom: 0.125rem;
 
+            }
+
+            .headerMenuIconMobile {
+                display: none;
             }
 
 
@@ -107,6 +111,66 @@ header {
 
 }
 
+/* The animation code */
+@keyframes menuMobil {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+.menuMobile {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: $menuMobilColor;
+    backdrop-filter: blur(2px);
+    animation-name: menuMobil;
+    animation-duration: 1s;
+    
+    .boxMenuMobile{
+        width: 95%;
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .textMenuMobile{
+            display: flex;
+            
+            img{
+                width: 40px;
+                margin-bottom: 40px;
+                margin-left: 300px;
+                
+            }
+        }
+
+        .navMenuMobile{
+            text-align: center;
+
+            img{
+                width: 250px;
+                margin-bottom: 40px;
+            }
+            
+            h2{
+                color: white;
+                font-size: 25pt;
+            }
+
+        }
+    }
+
+    }
+
+
+.menuMobileC {
+    display: flex;
+
+}
+
+
 // Media queries
 
 @media (max-width: 768px) {
@@ -123,7 +187,7 @@ header {
         display: none;
     }
 
-    body header .headerBox .headerIconBox .headerMenuMobile {
+    body header .headerBox .headerIconBox .headerMenuIconMobile {
         display: inline;
 
     }
@@ -136,8 +200,9 @@ header {
 
     body header .headerBox .headerIconBox .headerFavIcon,
     body header .headerBox .headerIconBox .headerBagIcon,
-    body header .headerBox .headerIconBox .headerMenuMobile {
+    body header .headerBox .headerIconBox .headerMenuIconMobile {
         width: 1.5625rem;
         margin: 1rem 0.3125rem 0rem 0rem;
     }
+
 }
