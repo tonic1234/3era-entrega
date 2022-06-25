@@ -1,17 +1,10 @@
 .contactBanner {
-    background: url(../media/banner2.jpg);
-    height: 20.25rem;
-    width: 100%;
-    background-size: cover;
-    background-attachment: fixed;
+    background: url(../media/Contact-us.jpg);
+    height: 15.25rem;
+    width: 100%;    
+    background-position: top;
     background-repeat: no-repeat;
-}
-
-.contactTitle {
-    font-weight: bold;
-    text-align: center;
-    margin-top: 1.25rem;
-    color: $oText;
+    
 }
 
 

@@ -57,29 +57,34 @@ header {
 
 
         .headerIconBox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+
+          
 
             .headerFavIcon,
             .headerBagIcon,
             .headerMenuIconMobile {
+                margin-left: 10px;
                 width: 1.4375rem;
-                margin: 1rem 0.625rem 0rem 0rem;
                 transition: all 1s;
 
                 &:hover {
                     transform: scale(1.2);
+                    
                 }
 
 
             }
-
-            .headerMenuMobile {
-                display: none;
-                margin-bottom: 0.125rem;
-
-            }
-
+          
             .headerMenuIconMobile {
                 display: none;
+                margin-bottom: 5px;
+               
+                
+                
             }
 
 
@@ -95,14 +100,22 @@ header {
     justify-content: center;
     margin-top: 0.625rem;
 
+    .mobileSearchIcon{
+        width: 1.7rem;
+        height:1.7rem ;
+        margin-left: 10px;
+        margin-top: 2px;
+    }
+
     .mobileFilterIcon {
         width: 1.5625rem;
         margin-left: 0.625rem;
+        
     }
 
     .mobileSearchBar {
         height: 1.875rem;
-        width: 65%;
+        width: 62%;
         border-radius: 0.4375rem;
         padding-left: 0.9375rem;
         border: none;
@@ -111,7 +124,7 @@ header {
 
 }
 
-/* The animation code */
+
 @keyframes menuMobil {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -123,7 +136,7 @@ header {
     height: 100vh;
     position: absolute;
     background-color: $menuMobilColor;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
     animation-name: menuMobil;
     animation-duration: 1s;
     
@@ -134,29 +147,50 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        
 
         .textMenuMobile{
+            width: 100%;
             display: flex;
+            justify-content: right;
+            align-items: baseline;
+             margin-bottom: 50px;
             
-            img{
-                width: 40px;
-                margin-bottom: 40px;
-                margin-left: 300px;
+            .closeMobileMenuBtn{
+                width: 30px;
+                margin-right: 20px;
+                              
                 
-            }
+                     }
         }
 
         .navMenuMobile{
             text-align: center;
+            margin-bottom: 70px;
+            
 
-            img{
-                width: 250px;
-                margin-bottom: 40px;
+
+            @keyframes menuMobilLogo {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(360deg)}
+              }
+            .menuMobileLogo{
+                width: 50px;
+                margin-bottom: 20px;
+                animation-name: menuMobilLogo;
+                animation-duration: 30s;
+                animation-timing-function:linear;
+                animation-iteration-count: infinite;
             }
             
             h2{
                 color: white;
                 font-size: 25pt;
+            }
+            .socialIcon{
+                margin-top: 30px;
+                margin-left: 10px;
+                width: 40px;
             }
 
         }
@@ -167,7 +201,8 @@ header {
 
 .menuMobileC {
     display: flex;
-
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -188,12 +223,14 @@ header {
     }
 
     body header .headerBox .headerIconBox .headerMenuIconMobile {
-        display: inline;
+        display:block;
+                       
 
     }
 
     body .headerMobileBox {
         display: flex;
+        
 
     }
 
@@ -202,7 +239,8 @@ header {
     body header .headerBox .headerIconBox .headerBagIcon,
     body header .headerBox .headerIconBox .headerMenuIconMobile {
         width: 1.5625rem;
-        margin: 1rem 0.3125rem 0rem 0rem;
+        
     }
 
+ 
 }

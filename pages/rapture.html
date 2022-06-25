@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../media/ico.png"/>
+    <link rel="icon" type="image/png" href="../media/ico.png"/>
     <meta name="description" content="Marca uruguaya de ropa Rapture seccion quienes somos">
     <meta name="keyword" content="Ropa, Moda, Tienda Online, Moda femenina, Moda masculina, Accesorios para moda">
     <title>Rapture - Quienes Somos</title>
@@ -15,36 +17,73 @@
     <!-- Inicio de header -->
     <header>
         <div class="headerBox">
-            <a href="../index.html"><img src="../media/logo.svg" alt="Logo de Rapture" class="headerLogo"></a>
+            <a href="#"><img src="../media/logo.svg" alt="Logo de Rapture" class="headerLogo"></a>
             <ul class="headerNav">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-                <li><a href="./hombres.html">Hombres</a></li>
-                <li><a href="./mujeres.html">Mujeres</a></li>
-                <li><a href=".rapture.html">Rapture</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="../pages/tienda.html">Tienda</a></li>
+                <li><a href="../pages/hombres.html">Hombres</a></li>
+                <li><a href="../pages/mujeres.html">Mujeres</a></li>
+                <li><a href="../pages/rapture.html">Rapture</a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
             </ul>
             <div class="headerIconBox">
                 <a href="#"><img src="../media/fav.svg" alt="Icono de favorito" class="headerFavIcon"></a>
                 <a href="#"><img src="../media/carrito.svg" alt="Icono de Carrito" class="headerBagIcon"></a>
-                <a href="#"><img class="headerMenuIconMobile" src="../media/menu.svg" alt="Icono de menu"></a>
+                <a href="#"><img id="menuMobileBtn" class="headerMenuIconMobile" src="../media/menu.svg"
+                        alt="Icono de menu"></a>
+            </div>
+            <div id="menuMobile" class="menuMobile">
+                <div class="boxMenuMobile">
+                    <div class="textMenuMobile">
+                        <img id="closeMobileMenuBtn" class="closeMobileMenuBtn" src="../media/close.png" alt="">
+                    </div>
+                    <div class="navMenuMobile">
+                        <img class="menuMobileLogo" src="../media/logomenu.png" alt="">
+                        <a href="../index.html">
+                            <h2>Inicio</h2>
+                        </a>
+                        <a href="../pages/tienda.html">
+                            <h2>Tienda</h2>
+                        </a>
+                        <a href="../pages/mujeres.html">
+                            <h2>Mujeres</h2>
+                        </a>
+                        <a href="../pages/hombres.html">
+                            <h2>Hombres</h2>
+                        </a>
+                        <a href="../pages/rapture.html">
+                            <h2>Rapture</h2>
+                        </a>
+                        <a href="../pages/contacto.html">
+                            <h2>Contacto</h2>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank"><img class="socialIcon"
+                                src="../media/youtube.png" alt="Logo de youtube"></a><a href="https://www.facebook.com/"
+                            target="_blank"><img class="socialIcon" src="../media/facebook.png"
+                                alt="Logo de Facebook"></a><a href="https://www.instagram.com/" target="_blank"><img
+                                class="socialIcon" src="../media/instagram.png" alt="Logo de Instagram"></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="headerMobileBox">
             <input class="mobileSearchBar" type="text" placeholder="Buscar...">
+            <img class="mobileSearchIcon" src="../media/search.png" alt="Icono de busqueda">
             <img class="mobileFilterIcon" src="../media/filter.svg" alt="Icono de filtro">
         </div>
     </header>
     <!-- Fin del header -->
     <main>
+        <h1 class="sectionTitle">Rapture</h1>
         <section class="dameroBox">
        <div class="damero">
-        <div class="nosotros"><h2>Nosotros</h2></div>
-        <div class="queHacemos"><h2>Que hacemos</h2></div>
-        <div class="comoHacemos"><h2>Como lo <br> hacemos</h2></div>
-        <div class="dondeHacemos"><h2>Donde lo <br> hacemos</h2></div>
-        <div class="dameroLogo"></div>
+        <div class="nosotros"><h2 class="nosotrosTitle" >Nosotros</h2></div>
+        <div class="queHacemos"><h2 class="dameroTitle" >Que hacemos</h2></div>
+        <div class="comoHacemos"><h2 class="dameroTitle" >Como lo <br> hacemos</h2></div>
+        <div class="dondeHacemos"><h2 class="dameroTitle" >Donde lo <br> hacemos</h2></div>
+        <div class="dameroLogo"></div>  
        </div>
+       <div class="color"></div>
     </section>
     </main>
     <!-- Inicio del footer -->
@@ -57,7 +96,7 @@
         </div>
     </footer>
     <!-- Fin del footer -->
-
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>

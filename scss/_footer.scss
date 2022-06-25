@@ -4,6 +4,12 @@ footer{
     height: 6.25rem;
     background-color: $footerColor;
 
+    .socialIconFooter{
+        width: 30px;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+
     p{
         color: $ligthText;
         margin-top: 0.625rem;
@@ -20,6 +26,12 @@ footer{
 footer{
     flex-direction: column;
     align-items: center;
+
+    .socialIconFooter{
+        display: none;
+    }
+
+  
 }
 footer p {
     font-size: 10pt;

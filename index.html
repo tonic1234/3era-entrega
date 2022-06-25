@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/png" href="./media/ico.png" />
+    <link rel="icon" type="image/png" href="./media/ico.png" />
     <meta name="description" content="Marca uruguaya de ropa Rapture seccion quienes somos">
     <meta name="keyword" content="Ropa, Moda, Tienda Online, Moda femenina, Moda masculina, Accesorios para moda">
     <title>Rapture - Inicio</title>
@@ -33,10 +35,10 @@
             <div id="menuMobile" class="menuMobile">
                 <div class="boxMenuMobile">
                     <div class="textMenuMobile">
-                        <img  id="closeMobileMenuBtn" class="closeMobileMenuBtn" src="./media/close.png" alt="">
+                        <img id="closeMobileMenuBtn" class="closeMobileMenuBtn" src="./media/close.png" alt="">
                     </div>
                     <div class="navMenuMobile">
-                        <img class="menuMobileLogo" src="./media/logo.svg" alt="">
+                        <img class="menuMobileLogo" src="./media/logomenu.png" alt="">
                         <a href="./index.html">
                             <h2>Inicio</h2>
                         </a>
@@ -55,12 +57,18 @@
                         <a href="./pages/contacto.html">
                             <h2>Contacto</h2>
                         </a>
+                        <a href="https://www.youtube.com/" target="_blank"><img class="socialIcon"
+                                src="./media/youtube.png" alt="Logo de youtube"></a><a href="https://www.facebook.com/"
+                            target="_blank"><img class="socialIcon" src="./media/facebook.png"
+                                alt="Logo de Facebook"></a><a href="https://www.instagram.com/" target="_blank"><img
+                                class="socialIcon" src="./media/instagram.png" alt="Logo de Instagram"></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="headerMobileBox">
             <input class="mobileSearchBar" type="text" placeholder="Buscar...">
+            <img class="mobileSearchIcon" src="./media/search.png" alt="Icono de busqueda">
             <img class="mobileFilterIcon" src="./media/filter.svg" alt="Icono de filtro">
         </div>
     </header>
@@ -198,26 +206,18 @@
     <footer>
         <div class="footerText">
             <p>Rapture todos los derechos reservados 2022</p>
+            <a href="https://www.youtube.com/" target="_blank"><img class="socialIconFooter"
+                src="./media/youtube.png" alt="Logo de youtube"></a><a href="https://www.facebook.com/"
+            target="_blank"><img class="socialIconFooter" src="./media/facebook.png"
+                alt="Logo de Facebook"></a><a href="https://www.instagram.com/" target="_blank"><img
+                class="socialIconFooter" src="./media/instagram.png" alt="Logo de Instagram"></a>
         </div>
         <div class="footerLogos"><img class="footerImg" src="./media/paypal-credit-card-icon-25.jpg"
                 alt="Logos de tarjetas de credito">
         </div>
     </footer>
     <!-- Fin del footer -->
-
-    <script>
-        const menuMobileBtn = document.getElementById('menuMobileBtn')
-        const closeMobileMenuBtn = document.getElementById('closeMobileMenuBtn')
-        const menuMobile = document.getElementById('menuMobile')
-
-
-        menuMobileBtn.addEventListener('click', function () {
-            menuMobile.classList.toggle('menuMobileC');
-        });
-        closeMobileMenuBtn.addEventListener('click', function () {
-            menuMobile.classList.toggle('menuMobileC');
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 
 </body>
 

@@ -8,39 +8,76 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../media/ico.png"/>
+    <link rel="icon" type="image/png" href="../media/ico.png"/>
     <meta name="description" content="Marca uruguaya de ropa Rapture seccion quienes somos">
     <meta name="keyword" content="Ropa, Moda, Tienda Online, Moda femenina, Moda masculina, Accesorios para moda">
     <title>Rapture - Contacto</title>
 </head>
 
 <body>
-    <!-- Inicio de header -->
-    <header>
-        <div class="headerBox">
-            <a href="../index.html"><img src="../media/logo.svg" alt="Logo de Rapture" class="headerLogo"></a>
-            <ul class="headerNav">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-                <li><a href="./hombres.html">Hombres</a></li>
-                <li><a href="./mujeres.html">Mujeres</a></li>
-                <li><a href="./rapture.html">Rapture</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
-            <div class="headerIconBox">
-                <a href="#"><img src="../media/fav.svg" alt="Icono de favorito" class="headerFavIcon"></a>
-                <a href="#"><img src="../media/carrito.svg" alt="Icono de Carrito" class="headerBagIcon"></a>
-                <a href="#"><img class="headerMenuIconMobile" src="../media/menu.svg" alt="Icono de menu"></a>
+   <!-- Inicio de header -->
+   <header>
+    <div class="headerBox">
+        <a href="#"><img src="../media/logo.svg" alt="Logo de Rapture" class="headerLogo"></a>
+        <ul class="headerNav">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/tienda.html">Tienda</a></li>
+            <li><a href="../pages/hombres.html">Hombres</a></li>
+            <li><a href="../pages/mujeres.html">Mujeres</a></li>
+            <li><a href="../pages/rapture.html">Rapture</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>
+        <div class="headerIconBox">
+            <a href="#"><img src="../media/fav.svg" alt="Icono de favorito" class="headerFavIcon"></a>
+            <a href="#"><img src="../media/carrito.svg" alt="Icono de Carrito" class="headerBagIcon"></a>
+            <a href="#"><img id="menuMobileBtn" class="headerMenuIconMobile" src="../media/menu.svg"
+                    alt="Icono de menu"></a>
+        </div>
+        <div id="menuMobile" class="menuMobile">
+            <div class="boxMenuMobile">
+                <div class="textMenuMobile">
+                    <img id="closeMobileMenuBtn" class="closeMobileMenuBtn" src="../media/close.png" alt="">
+                </div>
+                <div class="navMenuMobile">
+                    <img class="menuMobileLogo" src="../media/logomenu.png" alt="">
+                    <a href="../index.html">
+                        <h2>Inicio</h2>
+                    </a>
+                    <a href="../pages/tienda.html">
+                        <h2>Tienda</h2>
+                    </a>
+                    <a href="../pages/mujeres.html">
+                        <h2>Mujeres</h2>
+                    </a>
+                    <a href="../pages/hombres.html">
+                        <h2>Hombres</h2>
+                    </a>
+                    <a href="../pages/rapture.html">
+                        <h2>Rapture</h2>
+                    </a>
+                    <a href="../pages/contacto.html">
+                        <h2>Contacto</h2>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank"><img class="socialIcon"
+                            src="../media/youtube.png" alt="Logo de youtube"></a><a href="https://www.facebook.com/"
+                        target="_blank"><img class="socialIcon" src="../media/facebook.png"
+                            alt="Logo de Facebook"></a><a href="https://www.instagram.com/" target="_blank"><img
+                            class="socialIcon" src="../media/instagram.png" alt="Logo de Instagram"></a>
+                </div>
             </div>
         </div>
-        <div class="headerMobileBox">
-            <input class="mobileSearchBar" type="text" placeholder="Buscar...">
-            <img class="mobileFilterIcon" src="../media/filter.svg" alt="Icono de filtro">
-        </div>
-    </header>
-    <!-- Fin del header -->
+    </div>
+    <div class="headerMobileBox">
+        <input class="mobileSearchBar" type="text" placeholder="Buscar...">
+        <img class="mobileSearchIcon" src="../media/search.png" alt="Icono de busqueda">
+        <img class="mobileFilterIcon" src="../media/filter.svg" alt="Icono de filtro">
+    </div>
+</header>
+<!-- Fin del header -->
     <main>
         <div class="contactBanner"></div>
-        <h2 class="contactTitle">Contacto</h2>
+        <h1 class="sectionTitle">Contacto</h1>
         <!-- Inicio de formulario en Boostrap 5 -->
         <div class="formContainer">
             <form>
@@ -86,7 +123,7 @@
         </div>
     </footer>
     <!-- Fin del footer -->
-
+    <script src="../js/scripts.js"></script>
 </body>
 
 </html>
