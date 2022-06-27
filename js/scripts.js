@@ -9,3 +9,5 @@ menuMobileBtn.addEventListener('click', function () {
 closeMobileMenuBtn.addEventListener('click', function () {
     menuMobile.classList.toggle('menuMobileC');
 });
+
+

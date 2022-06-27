@@ -20,7 +20,7 @@ body {
   text-align: center;
   font-size: 21pt;
   font-weight: 800;
-  margin: 40px;
+  margin-bottom: 40px;
   color: #e96818;
 }
 
@@ -312,7 +312,7 @@ footer {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 6.25rem;
+  height: 6.55rem;
   background-color: rgba(23, 23, 23, 0.957);
 }
 
@@ -320,6 +320,13 @@ footer .socialIconFooter {
   width: 30px;
   margin-left: 5px;
   margin-top: 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+footer .socialIconFooter:hover {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
 }
 
 footer p {
@@ -372,7 +379,7 @@ footer img {
 
 .mainBanner {
   background: url(../media/banner.jpg);
-  height: 500px;
+  height: 31.25rem;
   width: 100%;
   background-size: cover;
   background-attachment: fixed;
@@ -392,18 +399,52 @@ footer img {
   display: none;
 }
 
-.mainLogos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 20px;
+.mainLogosBox {
+  height: 6.25rem;
+  max-width: 100%;
+  margin: 2.5rem auto;
+  position: relative;
+  overflow: hidden;
+  font-size: 0;
 }
 
-.mainLogos img {
-  width: 200px;
+@-webkit-keyframes moveSlideshow {
+  100% {
+    -webkit-transform: translateX(-62.5rem);
+            transform: translateX(-62.5rem);
+  }
+}
+
+@keyframes moveSlideshow {
+  100% {
+    -webkit-transform: translateX(-62.5rem);
+            transform: translateX(-62.5rem);
+  }
+}
+
+.mainLogosBox .logosSlider {
+  height: 9.375rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+  -webkit-animation: moveSlideshow 15s linear infinite;
+          animation: moveSlideshow 15s linear infinite;
+}
+
+.mainLogosBox .logosSlider:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.mainLogosBox .logosSlider img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12.5rem;
+  margin: 0;
 }
 
 .mainCat {
@@ -413,9 +454,9 @@ footer img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 20px;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  margin: 4rem;
+  -webkit-column-gap: 0.625rem;
+          column-gap: 0.625rem;
 }
 
 .catMujeres,
@@ -458,7 +499,7 @@ footer img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 10px;
+  padding: 0.625rem;
   width: 18.75rem;
   height: 9.375rem;
   background-color: rgba(150, 150, 150, 0.3);
@@ -489,7 +530,7 @@ footer img {
 .catMujeres .catContent .catTitle,
 .catHombres .catContent .catTitle,
 .catAccesorios .catContent .catTitle {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 
 .catMujeres .catContent button,
@@ -589,7 +630,7 @@ footer img {
   background: url(../media/banner4.jpg);
   height: 37.5rem;
   width: 100%;
-  margin-top: 1.25rem;
+  margin-top: 4.25rem;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -659,6 +700,12 @@ footer img {
   }
 }
 
+@media (max-width: 340px) {
+  .mainLogos img {
+    width: 4rem;
+  }
+}
+
 .sectionFlexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -670,7 +717,7 @@ footer img {
 }
 
 .sectionFlexContainer .sideBar {
-  height: 100vh;
+  height: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -777,6 +824,51 @@ footer img {
 .sectionFlexContainer .sideBar .sideProductBox .sideTextBox .sideProductPrice .sideOfert {
   text-decoration: line-through;
   color: #606060;
+}
+
+.sectionBannerTienda, .sectionBannerHombres,
+.sectionBannerMujeres, .sectionBannerContacto
+.sectionBannerRapture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 12.25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sectionBannerTienda h1, .sectionBannerHombres h1,
+.sectionBannerMujeres h1, .sectionBannerContacto
+.sectionBannerRapture h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 26pt;
+  text-shadow: 0px 0px black;
+}
+
+.sectionBannerTienda {
+  background: url(../media/bannertienda.jpg);
+  background-color: rgba(88, 37, 0, 0.703);
+  background-blend-mode: multiply;
+}
+
+.sectionBannerHombres {
+  background: url(../media/bannerhombres.jpg);
+  background-color: rgba(88, 37, 0, 0.703);
+  background-blend-mode: multiply;
+}
+
+.sectionBannerMujeres {
+  background: url(../media/bannermujeres.jpg);
+  background-color: rgba(88, 37, 0, 0.703);
+  background-blend-mode: multiply;
 }
 
 .productGalery {
@@ -901,42 +993,157 @@ footer img {
 }
 
 .contactBanner {
-  background: url(../media/Contact-us.jpg);
-  height: 15.25rem;
-  width: 100%;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-
-.formContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../media/Contact-us.jpg);
+  height: 15.25rem;
+  background-color: rgba(88, 37, 0, 0.703);
+  background-blend-mode: multiply;
+  margin-bottom: 0.625rem;
+}
+
+.contactBanner h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 26pt;
+  text-shadow: 0px 0px black;
+}
+
+.infoBox {
+  background-color: rgba(230, 224, 224, 0.787);
+  height: 18.75rem;
+  width: 18.75rem;
   padding: 1.875rem;
+  margin-top: 3.125rem;
 }
 
-.formContainer form {
-  width: 31.25rem;
-  margin-bottom: 1.25rem;
+.infoBox .infoTitle {
+  font-weight: 700;
+  font-size: 13pt;
 }
 
-.formContainer form button {
-  background-color: #e96818;
+.formTitle {
+  font-weight: 700;
+  font-size: 18pt;
+}
+
+.infoSubTitle {
+  margin-bottom: -1px;
+}
+
+.formName,
+.formEmail,
+.formText {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.625rem;
+}
+
+.formText {
+  height: 12.5rem;
+}
+
+.formBtn {
+  margin-top: 1.25rem;
+  margin-bottom: 3.125rem;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.864);
   color: #e6e6e6;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
-.formContainer form .form-check-input {
+.formBtn:hover {
   background-color: #e96818;
-  border: #e96818;
+}
+
+.storeCardsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.storeCardsBox .storeCardNewYork,
+.storeCardsBox .storeCardLondres,
+.storeCardsBox .storeCardOzlo,
+.storeCardsBox .storeCardEstocolmo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15.625rem;
+  height: 15.625rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.storeCardsBox .storeCardNewYork {
+  background: url(../media/newyork.jpg);
+}
+
+.storeCardsBox .storeCardNewYork:hover > div {
+  background-color: rgba(255, 98, 0, 0.749);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  width: 15.625rem;
+  height: 15.625rem;
+}
+
+.storeCardsBox .storeCardLondres {
+  background: url(../media/london.jpg);
+}
+
+.storeCardsBox .storeCardOzlo {
+  background: url(../media/ozlo.jpg);
+}
+
+.storeCardsBox .storeCardEstocolmo {
+  background: url(../media/stocolmo.jpg);
+}
+
+.storeCardsBox .storeInfoBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (max-width: 768px) {
-  .contactBanner {
-    display: none;
+  .infoSubTitle {
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -948,6 +1155,32 @@ footer img {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1.875rem;
+}
+
+.sectionBannerRapture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../media/bannerrapture.jpg);
+  height: 15.25rem;
+  background-color: rgba(88, 37, 0, 0.703);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sectionBannerRapture h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 26pt;
+  text-shadow: 0px 0px black;
 }
 
 .damero {

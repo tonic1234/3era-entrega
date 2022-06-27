@@ -1,36 +1,142 @@
 .contactBanner {
-    background: url(../media/Contact-us.jpg);
-    height: 15.25rem;
-    width: 100%;    
-    background-position: top;
-    background-repeat: no-repeat;
-    
-}
-
-
-.formContainer {
     display: flex;
     justify-content: center;
-    margin-top: 2.5rem;
-    padding: 1.875rem;
+    align-items: center;
+    background: url(../media/Contact-us.jpg);
+    height: 15.25rem;
+    background-color: rgba(88, 37, 0, 0.703);
+    background-blend-mode: multiply;
+    margin-bottom: 0.625rem;
 
-    form {
-        width: 31.25rem;
-        margin-bottom: 1.25rem;        
-     
-        button{
-            background-color: $oText;
-            color: $ligthText;
-        }
-        .form-check-input {
-            background-color: $oText;
-            border: $oText;
-        }
+    h1 {
+        color: white;
+        font-weight: 700;
+        font-size: 26pt;
+        text-shadow: 0px 0px black;
     }
 }
 
+.infoBox {
+    background-color: $sideBarColor;
+    height: 18.75rem;
+    width: 18.75rem;
+    padding: 1.875rem;
+    margin-top: 3.125rem;
+
+    .infoTitle {
+        font-weight: 700;
+        font-size: 13pt;
+
+    }
+}
+
+.formTitle {
+    font-weight: 700;
+    font-size: 18pt;
+
+}
+
+
+.infoSubTitle {
+    margin-bottom: -1px;
+}
+
+
+
+.formName,
+.formEmail,
+.formText {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.625rem;
+}
+
+.formText {
+    height: 12.5rem;
+}
+
+.formBtn {
+    margin-top: 1.25rem;
+    margin-bottom: 3.125rem;
+    width: 12.5rem;
+    height: 3.125rem;
+    border: none;
+    background-color: $headerColor;
+    color: $ligthText;
+    transition: all 1s;
+
+    &:hover {
+        background-color: $oText;
+    }
+
+}
+
+.storeCardsBox {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+    margin-bottom: 2.5rem;
+
+    .storeCardNewYork,
+    .storeCardLondres,
+    .storeCardOzlo,
+    .storeCardEstocolmo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15.625rem;
+        height: 15.625rem;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+
+    .storeCardNewYork {
+        background: url(../media/newyork.jpg);
+                   
+        &:hover>div{
+            background-color: rgba(255, 98, 0, 0.749);
+            backdrop-filter: blur(3px);
+            width: 15.625rem;
+            height: 15.625rem;
+        }
+
+            }
+
+    .storeCardLondres {
+        background: url(../media/london.jpg);
+
+    }
+
+    .storeCardOzlo {
+        background: url(../media/ozlo.jpg);
+
+    }
+
+    .storeCardEstocolmo {
+        background: url(../media/stocolmo.jpg);
+
+    }
+    .storeInfoBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;            
+        transition: all 1s;}
+
+}
+
+
+// Media queries
+
 @media (max-width: 768px) {
-    .contactBanner {
-        display: none;
+    .infoSubTitle {
+        margin-bottom: 0.75rem;
     }
-    }
+}

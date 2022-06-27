@@ -1,13 +1,18 @@
 footer{
     display: flex;
     justify-content: space-around;
-    height: 6.25rem;
+    height: 6.55rem;
     background-color: $footerColor;
 
     .socialIconFooter{
         width: 30px;
         margin-left: 5px;
         margin-top: 10px;
+        transition: all 1s;
+
+        &:hover{
+            transform: scale(1.09);
+        }
     }
 
     p{
