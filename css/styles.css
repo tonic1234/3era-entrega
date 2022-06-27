@@ -454,7 +454,7 @@ footer img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 4rem;
+  margin-top: 4rem;
   -webkit-column-gap: 0.625rem;
           column-gap: 0.625rem;
 }
@@ -1098,18 +1098,54 @@ footer img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 30px;
+}
+
+.storeCardsBox .storeCardNewYork:hover > div,
+.storeCardsBox .storeCardLondres:hover > div,
+.storeCardsBox .storeCardOzlo:hover > div,
+.storeCardsBox .storeCardEstocolmo:hover > div {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+}
+
+.storeCardsBox .storeInfoBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 15.625rem;
+  height: 15.625rem;
+  overflow: hidden;
+  background-color: rgba(255, 77, 0, 0.805);
+  -webkit-transform: translateY(15.625rem);
+          transform: translateY(15.625rem);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.storeCardsBox .storeInfoBox h3, .storeCardsBox .storeInfoBox p {
+  color: #ffff;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.storeCardsBox .storeInfoBox p {
+  font-size: 10pt;
 }
 
 .storeCardsBox .storeCardNewYork {
   background: url(../media/newyork.jpg);
-}
-
-.storeCardsBox .storeCardNewYork:hover > div {
-  background-color: rgba(255, 98, 0, 0.749);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  width: 15.625rem;
-  height: 15.625rem;
 }
 
 .storeCardsBox .storeCardLondres {
@@ -1124,26 +1160,12 @@ footer img {
   background: url(../media/stocolmo.jpg);
 }
 
-.storeCardsBox .storeInfoBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 0px;
-  height: 0px;
-  overflow: hidden;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
 @media (max-width: 768px) {
   .infoSubTitle {
     margin-bottom: 0.75rem;
+  }
+  .storeCardsBox {
+    display: none;
   }
 }
 

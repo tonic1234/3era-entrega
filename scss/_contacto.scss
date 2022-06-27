@@ -91,24 +91,52 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        margin-bottom: 30px;
+
+        &:hover>div{
+           
+            transform: translateY(0rem);
+            
+        }
         
+    }
+
+
+    .storeInfoBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 15.625rem;
+        height: 15.625rem;
+        overflow: hidden;
+        background-color: rgba(255, 77, 0, 0.805);
+        transform: translateY(15.625rem);         
+        transition: all 2s;
+    
+        h3,p{
+            color:#ffff;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    
+        p{font-size: 10pt};
+
+     
+    
     }
 
 
     .storeCardNewYork {
         background: url(../media/newyork.jpg);
                    
-        &:hover>div{
-            background-color: rgba(255, 98, 0, 0.749);
-            backdrop-filter: blur(3px);
-            width: 15.625rem;
-            height: 15.625rem;
-        }
-
+  
             }
 
     .storeCardLondres {
         background: url(../media/london.jpg);
+        
 
     }
 
@@ -121,22 +149,18 @@
         background: url(../media/stocolmo.jpg);
 
     }
-    .storeInfoBox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 0px;
-        height: 0px;
-        overflow: hidden;            
-        transition: all 1s;}
+
 
 }
-
 
 // Media queries
 
 @media (max-width: 768px) {
     .infoSubTitle {
         margin-bottom: 0.75rem;
+    }
+
+    .storeCardsBox{
+      display: none;
     }
 }
