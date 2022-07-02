@@ -1,13 +1,10 @@
 .sectionFlexContainer {
-    display: flex;
-    justify-content: center;
+    @include flexJc;
     background-color: $sectionBgColor;
 
     .sideBar {
         height: 1200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexAl;
         background-color: $sideBarColor;
         width: 18.75rem;
         padding: 1.875rem;
@@ -113,19 +110,19 @@
 }
 
 
-.sectionBannerTienda,.sectionBannerHombres,
-.sectionBannerMujeres, .sectionBannerContacto
-.sectionBannerRapture {
-    display: flex;
-    justify-content: center;
+.sectionBannerTienda,
+.sectionBannerHombres,
+.sectionBannerMujeres,
+.sectionBannerContacto .sectionBannerRapture {
+    @include flexJc;
     align-items: center;
     height: 12.25rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
- 
 
-    h1{
+
+    h1 {
         color: white;
         font-weight: 700;
         font-size: 26pt;
@@ -133,18 +130,19 @@
     }
 }
 
-.sectionBannerTienda{
+.sectionBannerTienda {
     background: url(../media/bannertienda.jpg);
     background-color: rgba(88, 37, 0, 0.703);
     background-blend-mode: multiply;
 }
 
-.sectionBannerHombres{
+.sectionBannerHombres {
     background: url(../media/bannerhombres.jpg);
     background-color: rgba(88, 37, 0, 0.703);
     background-blend-mode: multiply;
 }
-.sectionBannerMujeres{
+
+.sectionBannerMujeres {
     background: url(../media/bannermujeres.jpg);
     background-color: rgba(88, 37, 0, 0.703);
     background-blend-mode: multiply;
@@ -165,9 +163,7 @@
 
 
         .productGaleryBox {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flexAl;
             width: 12em;
             height: 17em;
             background-color: $fProductsBgColor;
@@ -221,6 +217,10 @@
     }
 
 }
+
+
+// Media queries
+
 
 @media (max-width: 768px) {
     .sectionFlexContainer .sideBar {

@@ -18,6 +18,20 @@ $ofertText: #606060;
 $secondTextColor:#ffffff;
 
 
+// Declaración de Mixin:
+
+@mixin flexJc {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexAl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 // Estilos universales:
 
 * {
@@ -37,6 +51,7 @@ body {
     font-size: 16px;
 
 }
+
 .sectionTitle {
     text-align: center;
     font-size: 21pt;
@@ -45,15 +60,15 @@ body {
     color: $oText
 }
 
-@import 'header', 'footer', 'index', 'sectionstyles','contacto','rapture';
+@import 'header', 'footer', 'index', 'sectionstyles', 'contacto', 'rapture';
 
 
 // * poner h1
 // pagina 404
-// *paginas de redes_blank
+// * paginas de redes_blank
 // * boton de nav 
 // * icono de fav
 // subir wireframe
-// hacer pagina de contactos
-// mixin y extend
+// * hacer pagina de contactos
+// * mixin y extend
 // breadcrumbs

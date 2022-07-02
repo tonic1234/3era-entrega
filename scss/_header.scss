@@ -57,8 +57,7 @@ header {
 
 
         .headerIconBox {
-            display: flex;
-            align-items: center;
+            @include flexJc;
             justify-content: center;
             margin-top: 10px;
 
@@ -135,17 +134,14 @@ header {
     width: 100vw;
     height: 100vh;
     position: absolute;
-    background-color: $menuMobilColor;
-    backdrop-filter: blur(3px);
+    background-color: rgb(209, 94, 0);
     animation-name: menuMobil;
     animation-duration: 1s;
     
     .boxMenuMobile{
         width: 95%;
         height: 95%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexAl;
         justify-content: center;
         
 
@@ -186,6 +182,7 @@ header {
             h2{
                 color: white;
                 font-size: 25pt;
+                font-weight: 700;
             }
             .socialIcon{
                 margin-top: 30px;
@@ -200,8 +197,7 @@ header {
 
 
 .menuMobileC {
-    display: flex;
-    justify-content: center;
+    @include flexJc;
     align-items: center;
 }
 

@@ -1,6 +1,5 @@
 .contactBanner {
-    display: flex;
-    justify-content: center;
+    @include flexJc;
     align-items: center;
     background: url(../media/Contact-us.jpg);
     height: 15.25rem;
@@ -81,8 +80,7 @@
     .storeCardLondres,
     .storeCardOzlo,
     .storeCardEstocolmo {
-        display: flex;
-        justify-content: center;
+        @include flexJc;
         align-items: center;
         width: 15.625rem;
         height: 15.625rem;
@@ -103,17 +101,15 @@
 
 
     .storeInfoBox{
-        display: flex;
-        flex-direction: column;
+        @include flexAl;
         justify-content: center;
-        align-items: center;
         text-align: center;
         width: 15.625rem;
         height: 15.625rem;
         overflow: hidden;
         background-color: rgba(255, 77, 0, 0.805);
         transform: translateY(15.625rem);         
-        transition: all 2s;
+        transition: all 1s;
     
         h3,p{
             color:#ffff;
@@ -153,7 +149,12 @@
 
 }
 
+
+
 // Media queries
+
+
+
 
 @media (max-width: 768px) {
     .infoSubTitle {
@@ -163,4 +164,11 @@
     .storeCardsBox{
       display: none;
     }
+
+    .formName,
+.formEmail,
+.formText {
+  font-size: 9pt;
+}
+
 }

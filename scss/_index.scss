@@ -4,13 +4,13 @@
     }
 
     to {
-        background-image: url("../media/banner5.jpg")
+        background-image: url("../media/bannerindex.png")
     }
 }
 
 
 .mainBanner {
-    background: url(../media/banner.jpg);
+    background: url(../media/bannerindex.png);
     height: 31.25rem;
     width: 100%;
     background-size: cover;
@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     animation-name: bannerAnimation;
     animation-duration: 7s;
-    animation-delay: 2s;
+    animation-delay: 1s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
 }
@@ -67,8 +67,7 @@
 }
 
 .mainCat {
-    display: flex;
-    justify-content: center;
+    @include flexJc;
     margin-top:4rem;
     column-gap: 0.625rem;
 
@@ -156,15 +155,12 @@
 
 
 .featuredProducts {
-    display: flex;
-    justify-content: center;
+    @include flexJc;
     column-gap: 0.625rem;
 
 
     .featuredProductBox {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexAl;
         min-width: 12rem;
         height: 20rem;
         background-color: $fProductsBgColor;
@@ -254,15 +250,12 @@
     }
 
     .mainCat {
-        flex-direction: column;
-        align-items: center;
+        @include flexAl;
 
     }
 
     .featuredProducts {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexAl;
 
     }
 
@@ -273,6 +266,11 @@
         margin-bottom: 1.25rem;
 
 
+    }
+
+    .secondBanner {
+        display: none;
+    
     }
 }
 

@@ -1,13 +1,11 @@
 
 .dameroBox{
-    display: flex;
-    justify-content: center; 
+    @include flexJc; 
     margin: 1.875rem;   
 }
 
 .sectionBannerRapture {
-    display: flex;
-    justify-content: center;
+    @include flexJc;
     align-items: center;
     background: url(../media/bannerrapture.jpg);
     height: 15.25rem;
@@ -37,9 +35,8 @@
     
 }
 .nosotros , .queHacemos, .comoHacemos, .dondeHacemos, .dameroLogo{
+    @include flexJc;
     grid-area: nosotros;
-    display: flex;
-    justify-content: center;
     align-items: center;
     background-color: rgba(255, 106, 0, 0.511);
     background-blend-mode: multiply;
@@ -93,6 +90,10 @@
     background-image: url(../media/logodamero.jpg);
     
 }
+
+
+// Media queries
+
 
 @media (max-width: 768px) {
 .damero{
