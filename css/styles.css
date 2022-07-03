@@ -274,6 +274,7 @@ header .headerBox .headerIconBox .headerMenuIconMobile {
 
   body header .headerBox .headerIconBox .headerMenuIconMobile {
     display: block;
+    margin-top: 0.25rem;
   }
 
   body .headerMobileBox {
