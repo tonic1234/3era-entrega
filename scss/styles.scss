@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 // font-family: 'Poppins', sans-serif;
 
-// Declaracion de variables:
+// Declaración de variables:
+
 $headerColor: rgba(0, 0, 0, 0.864);
 $footerColor: rgba(23, 23, 23, 0.957);
 $fProductsBgColor:rgba(233, 233, 233, 0.304);
@@ -52,23 +53,70 @@ body {
 
 }
 
+.errorBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .errorBtn{
+        width: 150px;
+        height: 45px;
+        background-color: $oText;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 12pt;
+        transition: all 1s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }  
+
+  .errorImgMobile{
+    display: none;
+  }
+    .errorImg{
+        width: 1000px;
+        margin-top: 130px;
+    }
+
+}
+
+
+
 .sectionTitle {
     text-align: center;
     font-size: 21pt;
     font-weight: 800;
-    margin-bottom: 40px;
-    color: $oText
+    margin-bottom: 2.5rem;
+    color: $oText;
 }
+
+
+// Imports de scss 
 
 @import 'header', 'footer', 'index', 'sectionstyles', 'contacto', 'rapture';
 
 
-// * poner h1
-// pagina 404
-// * paginas de redes_blank
-// * boton de nav 
-// * icono de fav
-// subir wireframe
-// * hacer pagina de contactos
-// * mixin y extend
-// breadcrumbs
+
+// Media queries
+
+
+@media (max-width: 768px) {
+    .errorBox{
+            .errorImgMobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40%;
+            width: 90vw;
+            margin-bottom: 20px;
+            
+          }
+         .errorImg{
+             display: none;
+          }
+      }
+    }
+

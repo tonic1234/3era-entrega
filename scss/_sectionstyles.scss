@@ -3,8 +3,8 @@
     background-color: $sectionBgColor;
 
     .sideBar {
-        height: 1200px;
         @include flexAl;
+        height: 75rem;
         background-color: $sideBarColor;
         width: 18.75rem;
         padding: 1.875rem;
@@ -131,19 +131,19 @@
 }
 
 .sectionBannerTienda {
-    background: url(../media/bannertienda.jpg);
+    background: url(../media/banner_tienda.jpg);
     background-color: rgba(88, 37, 0, 0.703);
     background-blend-mode: multiply;
 }
 
 .sectionBannerHombres {
-    background: url(../media/bannerhombres.jpg);
+    background: url(../media/banner_hombres.jpg);
     background-color: rgba(88, 37, 0, 0.703);
     background-blend-mode: multiply;
 }
 
 .sectionBannerMujeres {
-    background: url(../media/bannermujeres.jpg);
+    background: url(../media/banner_mujeres.jpg);
     background-color: rgba(88, 37, 0, 0.703);
     background-blend-mode: multiply;
 }
@@ -223,6 +223,8 @@
 
 
 @media (max-width: 768px) {
+
+
     .sectionFlexContainer .sideBar {
         display: none;
     }

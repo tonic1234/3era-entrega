@@ -14,11 +14,37 @@ body {
   font-size: 16px;
 }
 
+.errorBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.errorBox .errorBtn {
+  width: 150px;
+  height: 45px;
+  background-color: #e96818;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 12pt;
+  transition: all 1s;
+}
+.errorBox .errorBtn:hover {
+  transform: scale(1.1);
+}
+.errorBox .errorImgMobile {
+  display: none;
+}
+.errorBox .errorImg {
+  width: 1000px;
+  margin-top: 130px;
+}
+
 .sectionTitle {
   text-align: center;
   font-size: 21pt;
   font-weight: 800;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   color: #e96818;
 }
 
@@ -70,12 +96,12 @@ header .headerBox .headerIconBox {
   display: flex;
   justify-content: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 1.125rem;
 }
 header .headerBox .headerIconBox .headerFavIcon,
 header .headerBox .headerIconBox .headerBagIcon,
 header .headerBox .headerIconBox .headerMenuIconMobile {
-  margin-left: 10px;
+  margin-left: 0.625rem;
   width: 1.4375rem;
   transition: all 1s;
 }
@@ -86,7 +112,53 @@ header .headerBox .headerIconBox .headerMenuIconMobile:hover {
 }
 header .headerBox .headerIconBox .headerMenuIconMobile {
   display: none;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
+}
+
+@keyframes arrowUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.whatsapp {
+  position: absolute;
+  margin-top: 82vh;
+  margin-left: 85vw;
+  transition: all 1s;
+}
+.whatsapp:hover {
+  transform: rotate(15deg);
+}
+.whatsapp img {
+  width: 3.75rem;
+  transition: all 1s;
+  animation-name: arrowUp;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+.whatsapp img:hover {
+  transform: scale(1.4);
+}
+
+.topArrowNav {
+  position: absolute;
+  margin-top: 90vh;
+  margin-left: 85vw;
+}
+.topArrowNav img {
+  width: 3.75rem;
+  transition: all 1s;
+  animation-name: arrowUp;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+.topArrowNav img:hover {
+  transform: translateY(-10px);
 }
 
 .headerMobileBox {
@@ -97,7 +169,7 @@ header .headerBox .headerIconBox .headerMenuIconMobile {
 .headerMobileBox .mobileSearchIcon {
   width: 1.7rem;
   height: 1.7rem;
-  margin-left: 10px;
+  margin-left: 0.625rem;
   margin-top: 2px;
 }
 .headerMobileBox .mobileFilterIcon {
@@ -143,15 +215,15 @@ header .headerBox .headerIconBox .headerMenuIconMobile {
   display: flex;
   justify-content: right;
   align-items: baseline;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
 }
 .menuMobile .boxMenuMobile .textMenuMobile .closeMobileMenuBtn {
-  width: 30px;
+  width: 1.875rem;
   margin-right: 20px;
 }
 .menuMobile .boxMenuMobile .navMenuMobile {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 4.375rem;
 }
 @keyframes menuMobilLogo {
   from {
@@ -162,8 +234,8 @@ header .headerBox .headerIconBox .headerMenuIconMobile {
   }
 }
 .menuMobile .boxMenuMobile .navMenuMobile .menuMobileLogo {
-  width: 50px;
-  margin-bottom: 20px;
+  width: 3.125rem;
+  margin-bottom: 1.25rem;
   animation-name: menuMobilLogo;
   animation-duration: 30s;
   animation-timing-function: linear;
@@ -175,9 +247,9 @@ header .headerBox .headerIconBox .headerMenuIconMobile {
   font-weight: 700;
 }
 .menuMobile .boxMenuMobile .navMenuMobile .socialIcon {
-  margin-top: 30px;
-  margin-left: 10px;
-  width: 40px;
+  margin-top: 1.875rem;
+  margin-left: 0.625rem;
+  width: 2.5rem;
 }
 
 .menuMobileC {
@@ -213,6 +285,21 @@ body header .headerBox .headerIconBox .headerBagIcon,
 body header .headerBox .headerIconBox .headerMenuIconMobile {
     width: 1.5625rem;
   }
+
+  .topArrowNav {
+    margin-left: 75vw;
+  }
+  .topArrowNav img {
+    width: 3.125rem;
+  }
+
+  .whatsapp {
+    margin-top: 82vh;
+    margin-left: 75vw;
+  }
+  .whatsapp img {
+    width: 3.125rem;
+  }
 }
 footer {
   display: flex;
@@ -221,9 +308,9 @@ footer {
   background-color: rgba(23, 23, 23, 0.957);
 }
 footer .socialIconFooter {
-  width: 30px;
+  width: 1.875rem;
   margin-left: 5px;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   transition: all 1s;
 }
 footer .socialIconFooter:hover {
@@ -242,6 +329,7 @@ footer img {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 1.25rem;
   }
   footer .socialIconFooter {
     display: none;
@@ -260,11 +348,11 @@ footer img {
     background-image: url("../media/banner.jpg");
   }
   to {
-    background-image: url("../media/bannerindex.png");
+    background-image: url("../media/banner_index.png");
   }
 }
 .mainBanner {
-  background: url(../media/bannerindex.png);
+  background: url(../media/banner_index.png);
   height: 31.25rem;
   width: 100%;
   background-size: cover;
@@ -289,7 +377,7 @@ footer img {
   overflow: hidden;
   font-size: 0;
 }
-@keyframes moveSlideshow {
+@keyframes logosSlider {
   100% {
     transform: translateX(-62.5rem);
   }
@@ -301,7 +389,7 @@ footer img {
   overflow-x: hidden;
   top: 0;
   left: 0;
-  animation: moveSlideshow 15s linear infinite;
+  animation: logosSlider 15s linear infinite;
 }
 .mainLogosBox .logosSlider:hover {
   animation-play-state: paused;
@@ -317,6 +405,7 @@ footer img {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
+  margin-bottom: 1.8rem;
   column-gap: 0.625rem;
 }
 
@@ -327,7 +416,7 @@ footer img {
   align-items: flex-end;
   width: 18.75em;
   height: 21.875em;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   background-color: rgba(255, 106, 0, 0.349);
   background-blend-mode: multiply;
   background-position: center;
@@ -448,7 +537,7 @@ footer img {
 }
 
 .secondBanner {
-  background: url(../media/banner4.jpg);
+  background: url(../media/banner_secundario.jpg);
   height: 37.5rem;
   width: 100%;
   margin-top: 4.25rem;
@@ -458,22 +547,9 @@ footer img {
 }
 
 @media (max-width: 768px) {
-  @keyframes bannerAnimation {
-    from {
-      background-image: url("../media/banner.jpg");
-    }
-    to {
-      background-image: url("../media/banner5.jpg");
-    }
-  }
   .mainBanner {
-    background: url(../media/bannermobile.jpg);
+    background: url(../media/banner_index.png);
     background-position: top center;
-    animation-name: bannerAnimation;
-    animation-duration: 16s;
-    animation-delay: 2s;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
   }
 
   .mainLogos img {
@@ -514,10 +590,10 @@ footer img {
   background-color: #f1f1f1;
 }
 .sectionFlexContainer .sideBar {
-  height: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 75rem;
   background-color: rgba(230, 224, 224, 0.787);
   width: 18.75rem;
   padding: 1.875rem;
@@ -618,19 +694,19 @@ footer img {
 }
 
 .sectionBannerTienda {
-  background: url(../media/bannertienda.jpg);
+  background: url(../media/banner_tienda.jpg);
   background-color: rgba(88, 37, 0, 0.703);
   background-blend-mode: multiply;
 }
 
 .sectionBannerHombres {
-  background: url(../media/bannerhombres.jpg);
+  background: url(../media/banner_hombres.jpg);
   background-color: rgba(88, 37, 0, 0.703);
   background-blend-mode: multiply;
 }
 
 .sectionBannerMujeres {
-  background: url(../media/bannermujeres.jpg);
+  background: url(../media/banner_mujeres.jpg);
   background-color: rgba(88, 37, 0, 0.703);
   background-blend-mode: multiply;
 }
@@ -740,7 +816,7 @@ footer img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../media/Contact-us.jpg);
+  background: url(../media/banner_contacto.jpg);
   height: 15.25rem;
   background-color: rgba(88, 37, 0, 0.703);
   background-blend-mode: multiply;
@@ -820,7 +896,7 @@ footer img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 .storeCardsBox .storeCardNewYork:hover > div,
 .storeCardsBox .storeCardLondres:hover > div,
@@ -841,7 +917,8 @@ footer img {
   transform: translateY(15.625rem);
   transition: all 1s;
 }
-.storeCardsBox .storeInfoBox h3, .storeCardsBox .storeInfoBox p {
+.storeCardsBox .storeInfoBox h3,
+.storeCardsBox .storeInfoBox p {
   color: white;
   font-weight: 500;
   margin-top: 10px;
@@ -887,7 +964,7 @@ footer img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../media/bannerrapture.jpg);
+  background: url(../media/banner_rapture.jpg);
   height: 15.25rem;
   background-color: rgba(88, 37, 0, 0.703);
   background-blend-mode: multiply;
@@ -905,35 +982,49 @@ footer img {
 .damero {
   width: 50rem;
   height: 50rem;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   display: grid;
   grid-template-columns: 1/3 1/3 1/3;
   grid-template-rows: 1/3 1/3 1/3;
   grid-template-areas: "nosotros queHacemos queHacemos" "nosotros dameroLogo dondeHacemos" "comoHacemos comoHacemos dondeHacemos";
 }
 
-.nosotros, .queHacemos, .comoHacemos, .dondeHacemos, .dameroLogo {
+.nosotros,
+.queHacemos,
+.comoHacemos,
+.dondeHacemos,
+.dameroLogo {
   display: flex;
   justify-content: center;
   grid-area: nosotros;
   align-items: center;
   background-color: rgba(255, 106, 0, 0.511);
   background-blend-mode: multiply;
-  background-image: url(../media/nosotros.jpeg);
   background-position: center;
   background-size: cover;
   transition: all 1s;
 }
-.nosotros:hover, .queHacemos:hover, .comoHacemos:hover, .dondeHacemos:hover, .dameroLogo:hover {
-  box-shadow: 0px 0px 2px 2px #e96818;
+.nosotros:hover,
+.queHacemos:hover,
+.comoHacemos:hover,
+.dondeHacemos:hover,
+.dameroLogo:hover {
   background-color: rgba(255, 255, 255, 0);
   transform: scale(1.05);
   z-index: 2;
 }
-.nosotros h2, .queHacemos h2, .comoHacemos h2, .dondeHacemos h2, .dameroLogo h2 {
+.nosotros h2,
+.queHacemos h2,
+.comoHacemos h2,
+.dondeHacemos h2,
+.dameroLogo h2 {
   text-align: center;
   text-shadow: 0px 0px 2px rgb(17, 17, 17);
   color: white;
+}
+
+.nosotros {
+  background-image: url(../media/nosotros.jpeg);
 }
 
 .dameroLogo {
@@ -973,6 +1064,19 @@ footer img {
   }
 
   .dameroLogo {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .errorBox .errorImgMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40%;
+    width: 90vw;
+    margin-bottom: 20px;
+  }
+  .errorBox .errorImg {
     display: none;
   }
 }/*# sourceMappingURL=styles.css.map */

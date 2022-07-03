@@ -1,13 +1,12 @@
-
-.dameroBox{
-    @include flexJc; 
-    margin: 1.875rem;   
+.dameroBox {
+    @include flexJc;
+    margin: 1.875rem;
 }
 
 .sectionBannerRapture {
     @include flexJc;
     align-items: center;
-    background: url(../media/bannerrapture.jpg);
+    background: url(../media/banner_rapture.jpg);
     height: 15.25rem;
     background-color: rgba(88, 37, 0, 0.703);
     background-blend-mode: multiply;
@@ -15,80 +14,92 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    h1{
+    h1 {
         color: white;
         font-weight: 700;
         font-size: 26pt;
         text-shadow: 0px 0px black;
     }
 }
-.damero{
+
+.damero {
     width: 50rem;
     height: 50rem;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     display: grid;
     grid-template-columns: 1/3 1/3 1/3;
     grid-template-rows: 1/3 1/3 1/3;
     grid-template-areas: 'nosotros queHacemos queHacemos'
-    'nosotros dameroLogo dondeHacemos'
-    'comoHacemos comoHacemos dondeHacemos';
-    
+        'nosotros dameroLogo dondeHacemos'
+        'comoHacemos comoHacemos dondeHacemos';
+
 }
-.nosotros , .queHacemos, .comoHacemos, .dondeHacemos, .dameroLogo{
+
+.nosotros,
+.queHacemos,
+.comoHacemos,
+.dondeHacemos,
+.dameroLogo {
     @include flexJc;
     grid-area: nosotros;
     align-items: center;
     background-color: rgba(255, 106, 0, 0.511);
     background-blend-mode: multiply;
-    background-image: url(../media/nosotros.jpeg);
     background-position: center;
     background-size: cover;
-    transition:  all 1s;
+    transition: all 1s;
 
 
-
-    &:hover{
-        box-shadow: 0px 0px 2px 2px $oText;
+    &:hover {
         background-color: rgba(255, 255, 255, 0);
         transform: scale(1.05);
         z-index: 2;
-           }
+    }
 
-    h2{
+    h2 {
         text-align: center;
-        text-shadow: 0px 0px  2px rgb(17, 17, 17);
+        text-shadow: 0px 0px 2px rgb(17, 17, 17);
         color: #ffff;
     }
-   
+
 }
 
-.dameroLogo{
+.nosotros {
+    background-image: url(../media/nosotros.jpeg);
+}
+
+.dameroLogo {
     background-color: rgba(255, 255, 255, 0);
-    &:hover{
+
+    &:hover {
         transform: none;
     }
 }
 
-.queHacemos{
+.queHacemos {
     grid-area: queHacemos;
     background-image: url(../media/quehacemos.jpeg);
-    
-   
+
+
 }
-.comoHacemos{
+
+.comoHacemos {
     grid-area: comoHacemos;
     background-image: url(../media/comohacemos.webp);
-  
+
 }
-.dondeHacemos{
+
+.dondeHacemos {
     grid-area: dondeHacemos;
     background-image: url(../media/dondehacemos.jpeg);
-   
+
 }
-.dameroLogo{
+
+.dameroLogo {
     grid-area: dameroLogo;
     background-image: url(../media/logodamero.jpg);
-    
+
+
 }
 
 
@@ -96,16 +107,18 @@
 
 
 @media (max-width: 768px) {
-.damero{
-    width: 90%;
-    display: grid;
-    grid-template-columns: auto ;
-    grid-template-rows: auto auto auto auto ;
-    grid-template-areas: 'nosotros'
-    'queHacemos' 
-    'dondeHacemos'
-    'comoHacemos';}
-    
-    .dameroLogo{
-       display: none;}
+    .damero {
+        width: 90%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 'nosotros'
+            'queHacemos'
+            'dondeHacemos'
+            'comoHacemos';
+    }
+
+    .dameroLogo {
+        display: none;
+    }
 }

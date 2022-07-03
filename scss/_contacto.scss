@@ -1,7 +1,7 @@
 .contactBanner {
     @include flexJc;
     align-items: center;
-    background: url(../media/Contact-us.jpg);
+    background: url(../media/banner_contacto.jpg);
     height: 15.25rem;
     background-color: rgba(88, 37, 0, 0.703);
     background-blend-mode: multiply;
@@ -89,18 +89,18 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
 
-        &:hover>div{
-           
+        &:hover>div {
+
             transform: translateY(0rem);
-            
+
         }
-        
+
     }
 
 
-    .storeInfoBox{
+    .storeInfoBox {
         @include flexAl;
         justify-content: center;
         text-align: center;
@@ -108,31 +108,36 @@
         height: 15.625rem;
         overflow: hidden;
         background-color: rgba(255, 77, 0, 0.805);
-        transform: translateY(15.625rem);         
+        transform: translateY(15.625rem);
         transition: all 1s;
-    
-        h3,p{
-            color:#ffff;
+
+        h3,
+        p {
+            color: #ffff;
             font-weight: 500;
             margin-top: 10px;
         }
-    
-        p{font-size: 10pt};
 
-     
-    
+        p {
+            font-size: 10pt
+        }
+
+        ;
+
+
+
     }
 
 
     .storeCardNewYork {
         background: url(../media/newyork.jpg);
-                   
-  
-            }
+
+
+    }
 
     .storeCardLondres {
         background: url(../media/london.jpg);
-        
+
 
     }
 
@@ -161,14 +166,14 @@
         margin-bottom: 0.75rem;
     }
 
-    .storeCardsBox{
-      display: none;
+    .storeCardsBox {
+        display: none;
     }
 
     .formName,
-.formEmail,
-.formText {
-  font-size: 9pt;
-}
+    .formEmail,
+    .formText {
+        font-size: 9pt;
+    }
 
 }

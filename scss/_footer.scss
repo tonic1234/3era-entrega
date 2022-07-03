@@ -1,26 +1,26 @@
-footer{
+footer {
     display: flex;
     justify-content: space-around;
     height: 6.55rem;
     background-color: $footerColor;
 
-    .socialIconFooter{
-        width: 30px;
+    .socialIconFooter {
+        width: 1.875rem;
         margin-left: 5px;
-        margin-top: 10px;
+        margin-top: 0.625rem;
         transition: all 1s;
 
-        &:hover{
+        &:hover {
             transform: scale(1.09);
         }
     }
 
-    p{
+    p {
         color: $ligthText;
         margin-top: 0.625rem;
     }
 
-    img{
+    img {
         width: 18.75rem;
     }
 }
@@ -28,22 +28,23 @@ footer{
 // Media queries
 
 @media (max-width: 768px) {
-footer{
-    @include flexAl;
+    footer {
+        @include flexAl;
+        margin-top: 1.25rem;
 
-    .socialIconFooter{
-        display: none;
+        .socialIconFooter {
+            display: none;
+        }
+
+
     }
 
-  
-}
-footer p {
-    font-size: 10pt;
-  }
-  
-  footer img {
-    width: 18.75rem;
-  }
+    footer p {
+        font-size: 10pt;
+    }
+
+    footer img {
+        width: 18.75rem;
+    }
 
 }
-

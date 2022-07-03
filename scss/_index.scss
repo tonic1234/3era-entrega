@@ -1,16 +1,19 @@
+// Animación del banner principal
+
 @keyframes bannerAnimation {
     from {
         background-image: url("../media/banner.jpg");
     }
 
     to {
-        background-image: url("../media/bannerindex.png")
+        background-image: url("../media/banner_index.png")
     }
 }
 
+// Banner principal con efecto parallax
 
 .mainBanner {
-    background: url(../media/bannerindex.png);
+    background: url(../media/banner_index.png);
     height: 31.25rem;
     width: 100%;
     background-size: cover;
@@ -27,6 +30,8 @@
     display: none;
 }
 
+// Logos de marcas con animación de carrusel 
+
 .mainLogosBox {
     height: 6.25rem;
     max-width: 100%;
@@ -36,7 +41,7 @@
     font-size: 0;
 
 
-    @keyframes moveSlideshow {
+    @keyframes logosSlider {
         100% {
             transform: translateX(-62.5rem);
         }
@@ -50,9 +55,11 @@
         overflow-x: hidden;
         top: 0;
         left: 0;
-        animation: moveSlideshow 15s linear infinite;
+        animation: logosSlider 15s linear infinite;
 
-        &:hover{
+        // Pausa de la animación de logos al hacer hover 
+
+        &:hover {
             animation-play-state: paused;
         }
 
@@ -66,9 +73,12 @@
 
 }
 
+// Cajas de categorías principales
+
 .mainCat {
     @include flexJc;
-    margin-top:4rem;
+    margin-top: 4rem;
+    margin-bottom: 1.8rem;
     column-gap: 0.625rem;
 
 }
@@ -80,7 +90,7 @@
     align-items: flex-end;
     width: 18.75em;
     height: 21.875em;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     background-color: rgba(255, 106, 0, 0.349);
     background-blend-mode: multiply;
     background-position: center;
@@ -152,7 +162,7 @@
     background-image: url(../media/cataccesorios.jpg);
 }
 
-
+// Estilos de productos destacados 
 
 .featuredProducts {
     @include flexJc;
@@ -209,8 +219,10 @@
 
 }
 
+// Banner secundario 
+
 .secondBanner {
-    background: url(../media/banner4.jpg);
+    background: url(../media/banner_secundario.jpg);
     height: 37.5rem;
     width: 100%;
     margin-top: 4.25rem;
@@ -225,24 +237,12 @@
 
 @media (max-width: 768px) {
 
-    @keyframes bannerAnimation {
-        from {
-            background-image: url("../media/banner.jpg");
-        }
-
-        to {
-            background-image: url("../media/banner5.jpg")
-        }
-    }
 
     .mainBanner {
-        background: url(../media/bannermobile.jpg);
+        background: url(../media/banner_index.png);
         background-position: top center;
-        animation-name: bannerAnimation;
-        animation-duration: 16s;
-        animation-delay: 2s;
-        animation-direction: alternate-reverse;
-        animation-iteration-count: infinite;
+
+
     }
 
     .mainLogos img {
@@ -270,7 +270,7 @@
 
     .secondBanner {
         display: none;
-    
+
     }
 }
 
